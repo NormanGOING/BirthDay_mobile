@@ -112,25 +112,25 @@ canvas {
 
 /* 照片分布位置 */
 #p1 {
-    top: 13%;
+    top: 18%;
     left: 10%;
     animation-delay: 0s;
 }
 
 #p2 {
-    top: 12%;
+    top: 19%;
     right: 10%;
     animation-delay: 1s;
 }
 
 #p3 {
-    top: 32%;
+    top: 38%;
     left: 5%;
     animation-delay: 2s;
 }
 
 #p4 {
-    top: 28%;
+    top: 39%;
     right: 5%;
     animation-delay: 3s;
 }
@@ -182,3 +182,4 @@ button {
 button:hover {
     transform: scale(1.05);
 }
+
