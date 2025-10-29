@@ -1,0 +1,184 @@
+/* 全局样式 */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background: radial-gradient(circle at top, #ffd6e7, #ffb6c1);
+    font-family: 'Comic Sans MS', cursive;
+}
+
+/* 顶部祝福文字 */
+h1 {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 64px;
+    color: #fff;
+    text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff1493;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff69b4;
+    }
+
+    to {
+        text-shadow: 0 0 30px #ff1493;
+    }
+}
+
+/* 中间爱心 */
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 180px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 105, 180, 0.8), rgba(255, 182, 193, 0.5));
+    transform: translate(-50%, -50%) rotate(-45deg);
+    animation: heartbeat 1.5s infinite;
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.8);
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 105, 180, 0.8), rgba(255, 182, 193, 0.5));
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -100px;
+    left: 0;
+}
+
+.heart::after {
+    left: 100px;
+    top: 0;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(-45deg) scale(1.15);
+    }
+}
+
+/* 撒花/星星 Canvas */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 悬浮照片 */
+.photo {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: float 8s ease-in-out infinite alternate;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-30px) rotate(2deg);
+    }
+}
+
+/* 照片分布位置 */
+#p1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+#p2 {
+    top: 10%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+#p3 {
+    top: 32%;
+    left: 5%;
+    animation-delay: 2s;
+}
+
+#p4 {
+    top: 28%;
+    right: 5%;
+    animation-delay: 3s;
+}
+
+#p5 {
+    top: 8%;
+    left: 5%;
+    animation-delay: 4s;
+}
+
+#p6 {
+    top: 58%;
+    right: 8%;
+    animation-delay: 5s;
+}
+
+#p7 {
+    top: 82%;
+    left: 10%;
+    animation-delay: 6s;
+}
+
+#p8 {
+    top: 78;
+    right: 10%;
+    animation-delay: 6s;
+}
+
+/* 音乐控制按钮 */
+.music-controls {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
